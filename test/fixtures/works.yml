@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  homework: MyString
+  description: MyText
+  hour: 2020-06-23 18:31:01
+
+two:
+  homework: MyString
+  description: MyText
+  hour: 2020-06-23 18:31:01

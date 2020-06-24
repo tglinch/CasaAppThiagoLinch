@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :shop_lists
+  resources :works
   resources :familiars
   get 'welcome/index'
   root to: 'welcome#index'
