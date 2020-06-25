@@ -1,19 +1,16 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Homework:</strong>
-  <%= @work.homework %>
-</p>
+<section style="width: 19%; background-color: transparent; margin:  auto">
+  <p id="notice"><%= notice %></p>
+  
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @work.homework %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= @work.familiar.name %></h6>
+      <p class="card-text"><%= @work.description %></p>
+      <%= link_to "Done", works_path, class:"btn btn-primary" %>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>  
+  
+</section>
 
-<p>
-  <strong>Description:</strong>
-  <%= @work.description %>
-</p>
-
-<p>
-  <strong>Hour:</strong>
-  <%= @work.hour %>
-</p>
-
-<%= link_to 'Edit', edit_work_path(@work) %> |
-<%= link_to 'Back', works_path %>

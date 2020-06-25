@@ -1,5 +1,13 @@
-<h1>New Work</h1>
+<section style="background-color: transparent; width: 50%; margin: 30px auto">
+    <div style="margin: auto; width: 38%;">
+        <h1>New Homework</h1>
+    </div>
+    
+    
+    <div style="margin-left: 35px">
+        <%= link_to 'Back', works_path, class:"btn btn-primary" %>
+    <br></br>
+        <%= render 'form', work: @work %>    
+    </div>
 
-<%= render 'form', work: @work %>
-
-<%= link_to 'Back', works_path %>
+</section>

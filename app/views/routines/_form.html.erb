@@ -1,0 +1,52 @@
+<%= form_with(model: routine, local: true) do |form| %>
+  <% if routine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(routine.errors.count, "error") %> prohibited this routine from being saved:</h2>
+
+      <ul>
+        <% routine.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dom %>
+    <%= form.text_field :dom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seg %>
+    <%= form.text_field :seg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ter %>
+    <%= form.text_field :ter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qua %>
+    <%= form.text_field :qua %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qui %>
+    <%= form.text_field :qui %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.text_field :sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sab %>
+    <%= form.text_field :sab %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

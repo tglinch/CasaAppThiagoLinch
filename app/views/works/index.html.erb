@@ -1,51 +1,33 @@
+
+<section style="width: 85%; background-color: transparent; margin: auto;"  >
+<h1>Homework</h1>
 <p id="notice"><%= notice %></p>
-
-<h1>Works</h1>
-
+<br>
 
 <div class="dropdown">
   <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     New
   </a>
-
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <%= link_to "New Work", new_work_path, class:"dropdown-item" %>
     <%= link_to "New Member", new_familiar_path, class:"dropdown-item" %>
-    <%= link_to "New Shop List", new_shop_list_path, class:"dropdown-item" %>
   </div>
 </div>
 
 <br>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Homework</th>
-      <th>Familiar</th>
-      <th>Description</th>
-      <th>item</th>
-      <th>Hour</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="row">
     <% @works.each do |work| %>
-      <tr>
-        <td><%= work.homework %></td>
-        <td><%= work.familiar.name %></td>
-        <td><%= work.description %></td>
-        <td><%= work.shop_list.item %></td>
-        <td><%= work.hour %></td>
-        <td><%= link_to 'Show', work %></td>
-        <td><%= link_to 'Edit', edit_work_path(work) %></td>
-        <td><%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Work', new_work_path, class:"btn btn-primary" %>
-
+    <div class="col-sm-4">
+      <div class="card" style="width: 15rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= work.homework %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= work.familiar.name %></h6>
+          <p class="card-text"><%= work.description %></p>
+          <%= link_to 'Edit', edit_work_path(work), class:"card-link" %>
+          <%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' }, class:"card-link" %>
+        </div>
+      </div>
+    </div>
+    <%end%>
+  </div>
+</section>

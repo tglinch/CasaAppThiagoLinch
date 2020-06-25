@@ -8,24 +8,19 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  
-  
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <%= link_to "Inicio", welcome_index_path, class:"nav-link" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "Participantes", familiars_path, class:"nav-link" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "To Do", works_path, class:"nav-link" %>  
-    </li>
-  </ul>
-  
-  
-  
+ 
 
-  <body>
+  <body style="display: flex; height: 300px; background-color: white">
+    
+    <nav class="nav flex-column" style="margin-top: 50px; justify-content: space-around; background-color: white; width: 150px; padding: 0px 15px;">
+      <%= link_to "Inicio", welcome_index_path, class:"nav-link" %>
+      <%= link_to "To Do", works_path, class:"nav-link" %>
+      <%= link_to "Shop List", shop_lists_path, class:"nav-link" %>
+      <%#= link_to "To Do", works_path, class:"nav-link" %>
+      
+    </nav>
+    
     <%= yield %>
+    
   </body>
 </html>

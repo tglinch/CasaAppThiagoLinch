@@ -11,24 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :homework %>
-    <%= form.text_field :homework %>
+    <%= form.text_field :homework, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class:"form-control" %>
   </div>
   
-  <div>
+  <div class="form-group">
     <%= form.label :famliar%>
-    <%= form.select("familiar_id", Familiar.all.collect{|f| [ f.name, f.id ] }, {include_blank:'Selecione...'})%>
+    <%= form.select("familiar_id", Familiar.all.collect{|f| [ f.name, f.id ] }, {include_blank:'Selecione...'}, class:"form-control") %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :hour %>
-    <%= form.time_select :hour %>
+    <%= form.time_select :hour, class:"form-control" %>
   </div>
 
   <div class="actions">

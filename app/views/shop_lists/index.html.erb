@@ -1,29 +1,24 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Shop Lists</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>Qtd</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<section>
+  <h1>Shop Lists</h1>
+  <p id="notice"><%= notice %></p>
+          <%#= link_to 'Show', shop_lists %>
+          <%#= link_to 'Edit', edit_shop_list_path(shop_list) %>
+          <%#= link_to 'Destroy', shop_list, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <br>
+  <%= link_to 'New Shop List', new_shop_list_path, class:"btn btn-primary" %>
+  <br></br>
+  
+  <ul class="list-group">
     <% @shop_lists.each do |shop_list| %>
-      <tr>
-        <td><%= shop_list.item %></td>
-        <td><%= shop_list.qtd %></td>
-        <td><%= link_to 'Show', shop_list %></td>
-        <td><%= link_to 'Edit', edit_shop_list_path(shop_list) %></td>
-        <td><%= link_to 'Destroy', shop_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <%= link_to shop_list.item, shop_list %>
+        <span class="badge badge-primary badge-pill"><%= shop_list.qtd %></span>
+      </li>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Shop List', new_shop_list_path %>
+  </ul>
+  
+  
+</section>

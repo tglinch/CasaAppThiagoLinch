@@ -1,9 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @familiar.name %>
-</p>
-
-<%= link_to 'Edit', edit_familiar_path(@familiar) %> |
-<%= link_to 'Back', familiars_path %>
+<section style="width: 19%; background-color: transparent; margin:  auto"  >
+  <p id="notice"><%= notice %></p>
+  <%= link_to 'Back', works_path, class:"btn btn-primary" %>
+     <br></br>
+  
+   <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @familiar.name %></h5>
+      <%= link_to "Edit", edit_familiar_path(@familiar), class:"btn btn-primary" %>
+      <%= link_to 'Delete', familiars_path, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary" %>
+    </div>
+  </div>
+  
+</section>

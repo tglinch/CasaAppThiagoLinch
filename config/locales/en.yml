@@ -31,3 +31,42 @@
 
 en:
   hello: "Hello world"
+  new: New
+  home: Home
+  To DO: To Do
+  Shop List: Shop List
+  
+  #Butons
+  edit: Edit
+  destroy: Destroy
+  show: Show
+  back: Back
+  
+  #HomeWork Page
+  homework: HomeWork
+  new work: New Work
+  description: Description
+  hour: Hour
+  create work: Create Work
+  editing w: Editing Work
+  update work: Update work
+  
+  #Familiar Page
+  familiar: Familiar
+  name: Name
+  new familiar: New Familiar
+  create familiar: Create Familiar
+  update familiar: Update Familiar
+  editing f: Editing Familiar
+  
+  # Shop List
+  shop list: Shop List
+  new shop list: New Shop List
+  item: Item
+  qtd: Qtd
+  create shop list: Create Shop List
+  update shop list: Update Shop List
+  editing sl: Editing Shop List
+  
+  # Alerts
+  you'r sure?: Are you sure?

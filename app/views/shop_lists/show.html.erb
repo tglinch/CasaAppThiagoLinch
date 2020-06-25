@@ -1,14 +1,16 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Item:</strong>
-  <%= @shop_list.item %>
-</p>
-
-<p>
-  <strong>Qtd:</strong>
-  <%= @shop_list.qtd %>
-</p>
-
-<%= link_to 'Edit', edit_shop_list_path(@shop_list) %> |
-<%= link_to 'Back', shop_lists_path %>
+<section style=" background-color: transparent; margin: auto">
+  <p id="notice"><%= notice %></p>
+  
+  <%= link_to 'Back', shop_lists_path, class:"btn btn-primary" %>
+  <br></br>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @shop_list.item %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= @shop_list.qtd %></h6>
+      <%= link_to 'Destroy', shop_list_path, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary" %>
+      <%= link_to 'Edit', edit_shop_list_path(@shop_list), class:"btn btn-primary" %>
+    </div>
+  </div>  
+  
+</section>

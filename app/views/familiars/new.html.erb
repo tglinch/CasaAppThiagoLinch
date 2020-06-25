@@ -1,5 +1,11 @@
-<h1>New Familiar</h1>
-
-<%= render 'form', familiar: @familiar %>
-
-<%= link_to 'Back', familiars_path %>
+<section style="background-color: transparent; width: 50%; margin: 30px auto">
+    <div style="margin: auto; width: 31%; background-color: white">
+        <h1 style="color: #1E90FF">New Familiar</h1>
+    </div>
+    
+    <div>
+        <%= link_to 'Back', familiars_path, class:"btn btn-primary" %>
+        <br></br>
+        <%= render 'form', familiar: @familiar %>        
+    </div>
+</section>

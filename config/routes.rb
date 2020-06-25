@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :routines
   resources :shop_lists
   resources :works
   resources :familiars

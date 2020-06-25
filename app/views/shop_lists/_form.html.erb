@@ -1,3 +1,5 @@
+<section>
+
 <%= form_with(model: shop_list, local: true) do |form| %>
   <% if shop_list.errors.any? %>
     <div id="error_explanation">
@@ -10,18 +12,21 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  
+  <div class="form-group">
     <%= form.label :item %>
-    <%= form.text_field :item %>
+    <%= form.text_field :item, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="fomr-group">
     <%= form.label :qtd %>
-    <%= form.number_field :qtd %>
+    <%= form.number_field :qtd, class:"form-control" %>
   </div>
-
+<br>
   <div class="actions">
     <%= form.submit %>
   </div>
-<% end %>
+  
+  <% end %>
+  
+</section>
